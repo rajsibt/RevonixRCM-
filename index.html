@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revonix RCM – We Nix Denials & Protect Your Revenue</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     TOAST CONTAINER
+═══════════════════════════════════════ -->
+<div id="toast-container" aria-live="polite"></div>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" data-page="home" href="#">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#0d3550"/>
+          <path d="M7 7h9a6 6 0 0 1 0 12H7V7Z" fill="#1ab5b5"/>
+          <path d="M16 19l6 7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="22" cy="10" r="2.5" fill="rgba(255,255,255,0.3)"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="logo-name">REVONIX</span>
+        <span class="logo-sub">RCM</span>
+      </div>
+    </a>
+
+    <div class="nav-links" id="nav-links">
+      <a href="#" data-page="home"      class="nav-link active" id="nav-home">Home</a>
+      <a href="#" data-page="services"  class="nav-link" id="nav-services">Services</a>
+      <a href="#" data-page="advantage" class="nav-link" id="nav-advantage">The Revonix Advantage</a>
+      <a href="#" data-page="quote"     class="nav-link" id="nav-quote">Custom Revenue Quote</a>
+      <a href="#" data-page="contact"   class="nav-link" id="nav-contact">Contact Us</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="btn-primary" data-page="contact" id="nav-get-started">Get started</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<!-- ═══════════════════════════════════════
+     PAGE: HOME
+═══════════════════════════════════════ -->
+<main id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1600&q=80')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal-up">
+      <div class="hero-logo-card">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 3h11a7 7 0 0 1 0 14H3V3Z" fill="#0d3550"/>
+          <path d="M14 17l7 9" stroke="#0d3550" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="20" cy="9" r="3" fill="#1ab5b5" opacity=".6"/>
+        </svg>
+      </div>
+      <h1>We nix your denials and protect your revenue</h1>
+      <p>Stop fighting insurance companies alone. Revonix RCM is your revenue shield — we intercept rejections, optimize cash flow, and recover what you're owed.</p>
+      <div class="hero-btns">
+        <button class="btn-hero-primary" data-page="contact">Get a free practice audit <span class="btn-arrow">→</span></button>
+        <button class="btn-hero-outline" data-page="quote">Request custom quote</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="stats-inner">
+      <div class="stat-item reveal-up" data-delay="0">
+        <div class="stat-num" data-count="500" data-suffix="+">0</div>
+        <div class="stat-label">Clinics served nationwide</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal-up" data-delay="100">
+        <div class="stat-num" data-count="94.7" data-suffix="%" data-decimal="1">0</div>
+        <div class="stat-label">Average collection rate</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal-up" data-delay="200">
+        <div class="stat-num" data-count="2.8" data-suffix="x" data-decimal="1">0</div>
+        <div class="stat-label">Faster A/R recovery</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialties -->
+  <section class="specialties-section">
+    <div class="section-label">Specialty-Focused Medical Billing Services</div>
+    <h2 class="reveal-up">Helping clinicians optimize their practices while saving time and effort</h2>
+    <p class="section-lead reveal-up" data-delay="100">We provide tailored revenue cycle management solutions across more than 40 medical specialties, ensuring compliance and maximizing reimbursements for your specific field.</p>
+
+    <!-- Search box -->
+    <div class="spec-search-wrap reveal-up" data-delay="150">
+      <svg class="spec-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="spec-search" placeholder="Search specialties…" autocomplete="off" />
+      <span class="spec-search-clear" id="spec-search-clear" title="Clear">✕</span>
+    </div>
+    <p class="spec-no-results" id="spec-no-results">No specialties match your search.</p>
+
+    <div class="specialties-grid" id="specialties-grid">
+      <!-- Generated by JS from SPECIALTIES array -->
+    </div>
+  </section>
+
+  <!-- Why Choose Revonix -->
+  <section class="section why-section">
+    <div class="section-header reveal-up">
+      <h2>Why practices choose Revonix</h2>
+      <p class="section-lead">We don't just process claims — we fight for your revenue with the same intensity you bring to patient care.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal-left" data-delay="0">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h3>Denial prevention</h3>
+          <p>We intercept rejections before they impact your revenue, not after the damage is done.</p>
+        </div>
+      </div>
+      <div class="why-item reveal-right" data-delay="0">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div>
+          <h3>Revenue optimization</h3>
+          <p>Maximize collections with aggressive follow-up and expert coding that captures every dollar.</p>
+        </div>
+      </div>
+      <div class="why-item reveal-left" data-delay="100">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <h3>Dedicated support</h3>
+          <p>Your practice gets a dedicated team that knows your specialty inside and out.</p>
+        </div>
+      </div>
+      <div class="why-item reveal-right" data-delay="100">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div>
+          <h3>Transparent reporting</h3>
+          <p>See exactly what we collect, what we charge, and where every dollar goes in real time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Form -->
+  <section class="section section-alt cta-form-section">
+    <div class="two-col">
+      <div class="cta-left reveal-left">
+        <h2>Ready to protect your revenue?</h2>
+        <p>Join 500+ practices that trust Revonix to maximize their collections and minimize denials. Get a free audit to see where you're losing money.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>No upfront costs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>Fees tied to your success</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>Dedicated specialty team</li>
+        </ul>
+      </div>
+      <div class="reveal-right">
+        <div class="form-panel" id="home-form-panel">
+          <form class="rcm-form" id="home-form" data-form="home" novalidate>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="home-fname">First name <span class="req">*</span></label>
+                <input type="text" id="home-fname" name="firstName" placeholder="Maya" autocomplete="given-name" />
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="home-lname">Last name <span class="req">*</span></label>
+                <input type="text" id="home-lname" name="lastName" placeholder="Chen" autocomplete="family-name" />
+                <span class="field-error"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="home-clinic">Clinic or practice name <span class="req">*</span></label>
+              <input type="text" id="home-clinic" name="clinic" placeholder="Meridian Health Partners" />
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="home-specialty">Specialty <span class="req">*</span></label>
+              <div class="select-wrap">
+                <select id="home-specialty" name="specialty">
+                  <option value="">Select your specialty</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="home-email">Work email <span class="req">*</span></label>
+              <input type="email" id="home-email" name="email" placeholder="maya@meridianhealth.com" autocomplete="email" />
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="home-phone">Phone number <span class="req">*</span></label>
+              <input type="tel" id="home-phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" />
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="home-challenge">Biggest billing challenge</label>
+              <div class="select-wrap">
+                <select id="home-challenge" name="challenge">
+                  <option value="">Select your biggest challenge</option>
+                  <option>High denial rates</option>
+                  <option>Slow A/R recovery</option>
+                  <option>Coding errors</option>
+                  <option>Credentialing delays</option>
+                  <option>Staffing issues</option>
+                  <option>Low collection rates</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              <span class="btn-text">Request consultation</span>
+              <span class="btn-spinner" hidden></span>
+            </button>
+          </form>
+          <div class="form-success" id="home-success" hidden>
+            <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1ab5b5" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>Request received!</h3>
+            <p>A specialist will contact you within 24 hours for your free practice audit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main><!-- /home -->
+
+
+<!-- ═══════════════════════════════════════
+     PAGE: SERVICES
+═══════════════════════════════════════ -->
+<main id="page-services" class="page">
+
+  <section class="page-hero">
+    <h1 class="reveal-up">Comprehensive RCM services<br>that protect your revenue</h1>
+    <p class="reveal-up" data-delay="100">From front-end eligibility to back-end A/R recovery, we provide end-to-end solutions tailored to your practice's unique challenges.</p>
+  </section>
+
+  <!-- Services Tabs -->
+  <section class="section services-tabs-section">
+    <div class="tabs-nav reveal-up">
+      <button class="tab-btn active" data-tab="core">Core Solutions</button>
+      <button class="tab-btn" data-tab="specialized">Specialized Focus</button>
+    </div>
+
+    <!-- Core Tab -->
+    <div class="tab-panel active" id="tab-core">
+      <div class="section-header reveal-up" style="margin-bottom:40px">
+        <h2>Core Revenue Solutions</h2>
+        <p class="section-lead">Everything you need to maintain a healthy, predictable cash flow and reduce administrative burden.</p>
+      </div>
+      <div class="cards-3">
+        <div class="service-card reveal-up" data-delay="0">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <h3>Medical Billing Audit</h3>
+          <p>Our audit experts assess your billing practices and identify areas of improvement and revenue leakage before they cost you more.</p>
+          <div class="card-expand-toggle" data-card="audit">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          <div class="card-expand" id="card-audit">
+            <ul class="expand-list">
+              <li>Full A/R review and aging analysis</li>
+              <li>Denial root-cause identification</li>
+              <li>Coding accuracy assessment</li>
+              <li>Fee schedule benchmarking</li>
+              <li>Compliance gap reporting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card reveal-up" data-delay="100">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h3>Medical Billing</h3>
+          <p>Clean claim submissions, accurate coding, timely filing, and rigorous follow-up to accelerate your cash flow.</p>
+          <div class="card-expand-toggle" data-card="billing">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          <div class="card-expand" id="card-billing">
+            <ul class="expand-list">
+              <li>Clean claim submissions</li>
+              <li>Accurate medical coding</li>
+              <li>Timely claim filing</li>
+              <li>Insurance follow-up</li>
+              <li>Payment posting & reconciliation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card reveal-up" data-delay="200">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3>Eligibility Verification</h3>
+          <p>We verify benefits and eligibility before each patient encounter to prevent claim rejections at the source.</p>
+          <div class="card-expand-toggle" data-card="eligibility">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          <div class="card-expand" id="card-eligibility">
+            <ul class="expand-list">
+              <li>Real-time eligibility checks</li>
+              <li>Breakdown of benefits (BOB)</li>
+              <li>Prior authorization management</li>
+              <li>Co-pay & deductible calculation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card reveal-up" data-delay="0">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Denial Management</h3>
+          <p>We aggressively appeal unjust denials and correct root causes to prevent future rejections and maintain financial stability.</p>
+          <div class="card-expand-toggle" data-card="denial">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          <div class="card-expand" id="card-denial">
+            <ul class="expand-list">
+              <li>Same-day denial identification</li>
+              <li>Appeals with supporting documentation</li>
+              <li>Payer-specific strategy</li>
+              <li>Denial trend tracking & reporting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card reveal-up" data-delay="100">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <h3>Account Receivables</h3>
+          <p>Our relentless follow-up on aged claims recovers revenue other companies write off as uncollectible.</p>
+          <div class="card-expand-toggle" data-card="ar">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          <div class="card-expand" id="card-ar">
+            <ul class="expand-list">
+              <li>Aged A/R recovery (30/60/90+ days)</li>
+              <li>Payer follow-up calls and portals</li>
+              <li>Patient balance collection</li>
+              <li>Write-off analysis and recommendations</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card reveal-up" data-delay="200">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h3>Credentialing & Enrollment</h3>
+          <p>Get enrolled faster, stay compliant, and avoid payment delays due to lapsed provider files.</p>
+          <div class="card-expand-toggle" data-card="cred">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+          <div class="card-expand" id="card-cred">
+            <ul class="expand-list">
+              <li>CAQH profile setup & maintenance</li>
+              <li>Insurance panel enrollment</li>
+              <li>Re-credentialing management</li>
+              <li>NPI and taxonomy verification</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specialized Tab -->
+    <div class="tab-panel" id="tab-specialized">
+      <div class="section-header reveal-up" style="margin-bottom:40px">
+        <h2>Specialized Focus Areas</h2>
+        <p class="section-lead">We bring deep expertise to complex billing environments where generic approaches fail.</p>
+      </div>
+      <div class="cards-2">
+        <div class="service-card reveal-up" data-delay="0">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h3>Medical Billing</h3>
+          <p>Our team of medical billers is fully able to provide you with clean claim submissions. We ensure accurate coding, timely filing, and rigorous follow-up.</p>
+          <ul class="inline-list">
+            <li>Clean claim submissions</li>
+            <li>Accurate medical coding</li>
+            <li>Timely claim filing</li>
+            <li>Insurance follow-up</li>
+          </ul>
+        </div>
+        <div class="service-card reveal-up" data-delay="100">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+          <h3>Dental Billing</h3>
+          <p>Specialized dental billing services tailored to dental practices, handling complex dental coding and insurance claims.</p>
+          <ul class="inline-list">
+            <li>Dental coding expertise</li>
+            <li>Insurance claim management</li>
+            <li>Patient billing support</li>
+            <li>Treatment plan verification</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <div class="cta-band reveal-up">
+    <h2>Ready to maximize your revenue?</h2>
+    <p>Let's discuss how our specialized services can solve your specific billing challenges.</p>
+    <button class="btn-teal-outline" data-page="contact">Schedule a consultation <span class="btn-arrow">→</span></button>
+  </div>
+
+</main><!-- /services -->
+
+
+<!-- ═══════════════════════════════════════
+     PAGE: THE REVONIX ADVANTAGE
+═══════════════════════════════════════ -->
+<main id="page-advantage" class="page">
+
+  <section class="page-hero">
+    <h1 class="reveal-up">The Revonix advantage</h1>
+    <p class="reveal-up" data-delay="100">We're not just another billing company. We're your revenue shield — built to fight insurance companies and protect what you've earned.</p>
+    <div class="page-hero-img reveal-up" data-delay="200">
+      <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=80" alt="Healthcare professionals reviewing data" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="section adv-layout">
+    <div class="adv-features reveal-left">
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div>
+          <h3>We fight insurance companies</h3>
+          <p>Most billing companies process claims and move on. We aggressively challenge every denial, appeal every underpayment, and fight for what you're owed. Your revenue is our mission.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div>
+          <h3>Proactive, not reactive</h3>
+          <p>We intercept problems before they become denials. Our team reviews claims pre-submission, catches coding errors, and ensures clean claims from day one. Prevention beats appeals every time.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div>
+          <h3>Speed matters</h3>
+          <p>Aged A/R kills cash flow. We work claims within 24 hours of submission, follow up relentlessly, and recover revenue other companies write off as uncollectible.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <div>
+          <h3>Optimized for your specialty</h3>
+          <p>Generic billing doesn't work for pharmacy DIR fees or podiatry surgical modifiers. Our teams specialize in your field and know the nuances that maximize reimbursement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="adv-sidebar reveal-right">
+      <div class="advantage-box">
+        <h3>What sets us apart</h3>
+        <div class="adv-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>Specialty-focused teams (not generalists)</div>
+        <div class="adv-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>Same-day claim review and submission</div>
+        <div class="adv-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>Aggressive denial appeals with high win rates</div>
+        <div class="adv-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>Transparent reporting on every claim</div>
+        <div class="adv-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>Fees tied to your success, not flat rates</div>
+      </div>
+      <div class="partner-box">
+        <h3>Your practice deserves a revenue partner, not just a billing service</h3>
+        <p>Insurance companies have entire departments dedicated to denying claims. You need a team just as aggressive fighting for your revenue.</p>
+        <p>That's what Revonix delivers: specialty expertise, proactive claim management, and relentless follow-up that turns denials into dollars.</p>
+        <button class="btn-primary" data-page="services">See how we can help <span class="btn-arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+
+</main><!-- /advantage -->
+
+
+<!-- ═══════════════════════════════════════
+     PAGE: CUSTOM REVENUE QUOTE
+═══════════════════════════════════════ -->
+<main id="page-quote" class="page">
+
+  <section class="page-hero">
+    <h1 class="reveal-up">Custom revenue quote</h1>
+    <p class="reveal-up" data-delay="100">RCM pricing isn't one-size-fits-all. Your quote is tailored to your specialty, volume, and revenue goals.</p>
+    <div class="page-hero-img reveal-up" data-delay="200">
+      <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80" alt="Hospital room" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="two-col">
+      <div class="reveal-left">
+        <h2>How our pricing works</h2>
+        <p class="section-lead" style="margin-top:14px">We charge a percentage of your net collections — typically around 2.95%, but this varies based on your practice's unique needs.</p>
+        <div class="pricing-box" style="margin-top:28px">
+          <h3>Your rate depends on:</h3>
+          <ul class="pricing-list">
+            <li>Practice specialty and complexity</li>
+            <li>Monthly claim volume</li>
+            <li>Current denial rate and A/R age</li>
+            <li>Payer mix and contract terms</li>
+            <li>Required service level and support</li>
+          </ul>
+        </div>
+        <div class="note-box">
+          <p><strong>Why custom quotes?</strong> A high-volume pharmacy with complex PBM contracts needs different support than a small podiatry practice. We price based on the work required to maximize your revenue, not arbitrary flat fees.</p>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="faq-section" style="margin-top:36px">
+          <h3 style="font-family:'Manrope',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:16px">Frequently asked questions</h3>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-toggle">Are there any setup fees? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-answer"><p>No. There are zero setup fees or monthly minimums. You only pay when we collect, and our fee is a percentage of net collections.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-toggle">How long does onboarding take? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-answer"><p>Most practices are fully onboarded within 5–10 business days. We handle EHR integration, payer credentialing review, and team assignment in parallel.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-toggle">What EHR/PM systems do you support? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-answer"><p>We work with all major EHR and practice management systems including Epic, Athena, Kareo, AdvancedMD, eClinicalWorks, Practice Fusion, and more.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-toggle">Can I cancel at any time? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-answer"><p>Yes. We offer flexible agreements with 30-day notice requirements. We're confident our results will speak for themselves — no lock-in traps.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="form-panel">
+          <h3>Request your custom quote</h3>
+          <form class="rcm-form" id="quote-form" data-form="quote" novalidate>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="q-fname">First name <span class="req">*</span></label>
+                <input type="text" id="q-fname" name="firstName" placeholder="Maya" />
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="q-lname">Last name <span class="req">*</span></label>
+                <input type="text" id="q-lname" name="lastName" placeholder="Chen" />
+                <span class="field-error"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="q-clinic">Clinic or practice name <span class="req">*</span></label>
+              <input type="text" id="q-clinic" name="clinic" placeholder="Meridian Health Partners" />
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="q-specialty">Specialty <span class="req">*</span></label>
+              <div class="select-wrap">
+                <select id="q-specialty" name="specialty">
+                  <option value="">Select your specialty</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="q-email">Work email <span class="req">*</span></label>
+              <input type="email" id="q-email" name="email" placeholder="maya@meridianhealth.com" />
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="q-phone">Phone number <span class="req">*</span></label>
+              <input type="tel" id="q-phone" name="phone" placeholder="(555) 123-4567" />
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="q-challenge">Biggest billing challenge</label>
+              <div class="select-wrap">
+                <select id="q-challenge" name="challenge">
+                  <option value="">Select your biggest challenge</option>
+                  <option>High denial rates</option>
+                  <option>Slow A/R recovery</option>
+                  <option>Coding errors</option>
+                  <option>Credentialing delays</option>
+                  <option>Staffing issues</option>
+                  <option>Low collection rates</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              <span class="btn-text">Request consultation</span>
+              <span class="btn-spinner" hidden></span>
+            </button>
+          </form>
+          <div class="form-success" id="quote-success" hidden>
+            <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1ab5b5" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>Quote request received!</h3>
+            <p>A specialist will reach out within 24 hours with your custom rate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you get -->
+  <section class="section section-alt">
+    <div class="section-header section-center reveal-up">
+      <h2>What you get with Revonix</h2>
+      <p class="section-lead">Our fees are tied to your success. Here's what that means for your practice.</p>
+    </div>
+    <div class="cards-3" style="margin-top:40px">
+      <div class="service-card reveal-up" data-delay="0">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>No upfront costs</h3>
+        <p>Zero setup fees, no monthly minimums. You only pay when we collect.</p>
+      </div>
+      <div class="service-card reveal-up" data-delay="100">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h3>Success-based pricing</h3>
+        <p>Our fees are a percentage of what we collect. When you win, we win.</p>
+      </div>
+      <div class="service-card reveal-up" data-delay="200">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Transparent reporting</h3>
+        <p>See exactly what we collect, what we charge, and where every dollar goes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-center" style="padding-top:48px;padding-bottom:72px">
+    <h2 class="reveal-up">Ready to see your custom rate?</h2>
+    <p class="section-lead reveal-up" data-delay="100" style="margin:14px auto 28px">Fill out the form above or schedule a call to discuss your practice's specific needs and get a personalized quote.</p>
+    <button class="btn-teal-solid reveal-up" data-delay="200" id="scroll-to-quote-form">Get your quote now <span class="btn-arrow">→</span></button>
+  </section>
+
+</main><!-- /quote -->
+
+
+<!-- ═══════════════════════════════════════
+     PAGE: CONTACT
+═══════════════════════════════════════ -->
+<main id="page-contact" class="page">
+
+  <section class="page-hero">
+    <h1 class="reveal-up">Let's protect your revenue together</h1>
+    <p class="reveal-up" data-delay="100">Ready to stop fighting insurance companies alone? Reach out and let's discuss how Revonix can maximize your collections.</p>
+  </section>
+
+  <section class="section">
+    <div class="two-col">
+      <div class="reveal-left">
+        <h2 style="font-size:28px">Get in touch</h2>
+        <div class="contact-items" style="margin-top:28px">
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><h4>Email us</h4><p>info@revonixrcm.com</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><h4>Business hours</h4><p>Monday – Friday, 9am – 6pm EST</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><h4>Serving</h4><p>500+ clinics nationwide</p></div>
+          </div>
+        </div>
+        <div class="next-steps">
+          <h4>What happens next?</h4>
+          <div class="next-step"><div class="step-num">1</div><p>We'll review your practice details and billing challenges</p></div>
+          <div class="next-step"><div class="step-num">2</div><p>A specialist from your field will contact you within 24 hours</p></div>
+          <div class="next-step"><div class="step-num">3</div><p>We'll provide a free practice audit and custom quote</p></div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="form-panel">
+          <h3>Send us a message</h3>
+          <form class="rcm-form" id="contact-form" data-form="contact" novalidate>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="c-fname">First name <span class="req">*</span></label>
+                <input type="text" id="c-fname" name="firstName" placeholder="Maya" />
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="c-lname">Last name <span class="req">*</span></label>
+                <input type="text" id="c-lname" name="lastName" placeholder="Chen" />
+                <span class="field-error"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="c-clinic">Clinic or practice name <span class="req">*</span></label>
+              <input type="text" id="c-clinic" name="clinic" placeholder="Meridian Health Partners" />
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="c-specialty">Specialty <span class="req">*</span></label>
+              <div class="select-wrap">
+                <select id="c-specialty" name="specialty">
+                  <option value="">Select your specialty</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="c-email">Work email <span class="req">*</span></label>
+              <input type="email" id="c-email" name="email" placeholder="maya@meridianhealth.com" />
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Phone number <span class="req">*</span></label>
+              <input type="tel" id="c-phone" name="phone" placeholder="(555) 123-4567" />
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="c-challenge">Biggest billing challenge</label>
+              <div class="select-wrap">
+                <select id="c-challenge" name="challenge">
+                  <option value="">Select your biggest challenge</option>
+                  <option>High denial rates</option>
+                  <option>Slow A/R recovery</option>
+                  <option>Coding errors</option>
+                  <option>Credentialing delays</option>
+                  <option>Staffing issues</option>
+                  <option>Low collection rates</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="c-message">Message (optional)</label>
+              <textarea id="c-message" name="message" rows="3" placeholder="Tell us more about your practice and billing challenges…"></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              <span class="btn-text">Send message</span>
+              <span class="btn-spinner" hidden></span>
+            </button>
+          </form>
+          <div class="form-success" id="contact-success" hidden>
+            <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1ab5b5" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>Message sent!</h3>
+            <p>A specialist will contact you within 24 hours for your free practice audit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main><!-- /contact -->
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="nav-logo" data-page="home" href="#">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#0d3550"/><path d="M7 7h9a6 6 0 0 1 0 12H7V7Z" fill="#1ab5b5"/><path d="M16 19l6 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="nav-logo-text"><span class="logo-name">REVONIX</span><span class="logo-sub">RCM</span></div>
+        </a>
+        <p>Your revenue shield. We nix denials and protect your practice's financial health.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <a href="#" data-page="services">Services</a>
+        <a href="#" data-page="advantage">The Revonix Advantage</a>
+        <a href="#" data-page="quote">Custom Quote</a>
+        <a href="#" data-page="contact">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@revonixrcm.com</span>
+        </div>
+        <div class="footer-contact-row"><span>US business hours: Mon–Fri, 9am–6pm EST</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Revonix RCM. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
