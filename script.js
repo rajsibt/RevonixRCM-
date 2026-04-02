@@ -438,25 +438,19 @@ async function handleFormSubmit(e) {
   btnText.hidden = true;
   spinner.hidden = false;
 
- // Collect form data
-  const data = new FormData(form);
+  // --- REAL API CALL TO FORMSPREE ---
+  const formData = new FormData(form);
 
-  // Send data to Formspree Database
   try {
     const response = await fetch("https://formspree.io/f/mvzvbajj", {
       method: "POST",
-      body: data,
+      body: formData,
       headers: {
         'Accept': 'application/json'
       }
     });
 
-    if (response.ok) {
-      // Show success state
-      btn.disabled = false;
-      btnText.hidden = false;
-      spinner.hidden = true;
-    } else {
+    if (!response.ok) {
       showToast("Oops! There was a problem submitting your form.", "error");
       btn.disabled = false;
       btnText.hidden = false;
@@ -470,6 +464,12 @@ async function handleFormSubmit(e) {
     spinner.hidden = true;
     return;
   }
+  // --- END API CALL ---
+
+  // Show success state
+  btn.disabled = false;
+  btnText.hidden = false;
+  spinner.hidden = true;
 
   const panel   = document.getElementById(`${formId}-form-panel`) || form.closest('.form-panel');
   const success = document.getElementById(`${formId}-success`);
@@ -482,6 +482,9 @@ async function handleFormSubmit(e) {
       success.style.animation = 'fadeSlideIn .4s ease forwards';
     }, 280);
   }
+
+  showToast('Request received! We\'ll be in touch within 24 hours.', 'success');
+}
 
   // Collect form data for console (in production, send to backend)
   const data = collectFormData(form);
