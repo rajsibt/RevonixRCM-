@@ -438,13 +438,38 @@ async function handleFormSubmit(e) {
   btnText.hidden = true;
   spinner.hidden = false;
 
-  // Simulate API call (replace with real fetch() in production)
-  await simulateApiCall(1400);
+ // Collect form data
+  const data = new FormData(form);
 
-  // Show success state
-  btn.disabled = false;
-  btnText.hidden = false;
-  spinner.hidden = true;
+  // Send data to Formspree Database
+  try {
+    const response = await fetch("https://formspree.io/f/mvzvbajj", {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      // Show success state
+      btn.disabled = false;
+      btnText.hidden = false;
+      spinner.hidden = true;
+    } else {
+      showToast("Oops! There was a problem submitting your form.", "error");
+      btn.disabled = false;
+      btnText.hidden = false;
+      spinner.hidden = true;
+      return;
+    }
+  } catch (error) {
+    showToast("Network error. Please try again.", "error");
+    btn.disabled = false;
+    btnText.hidden = false;
+    spinner.hidden = true;
+    return;
+  }
 
   const panel   = document.getElementById(`${formId}-form-panel`) || form.closest('.form-panel');
   const success = document.getElementById(`${formId}-success`);
