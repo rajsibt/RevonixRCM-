@@ -486,23 +486,6 @@ async function handleFormSubmit(e) {
   showToast('Request received! We\'ll be in touch within 24 hours.', 'success');
 }
 
-  // Collect form data for console (in production, send to backend)
-  const data = collectFormData(form);
-  console.log('Form submitted:', formId, data);
-
-  showToast('Request received! We\'ll be in touch within 24 hours.', 'success');
-}
-
-function collectFormData(form) {
-  const data = {};
-  new FormData(form).forEach((value, key) => { data[key] = value; });
-  return data;
-}
-
-function simulateApiCall(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 /* ═══════════════════════════════════════════════
    13. TOAST NOTIFICATIONS
    ═══════════════════════════════════════════════ */
